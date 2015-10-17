@@ -1,0 +1,139 @@
+/*
+	BUTTON STYLES
+*/
+
+.smallrounded{
+	display:inline-block;
+	font:400 13px 'Montserrat', Arial, Sans-Serif;
+	padding:6px 20px; 
+	background:#2b2626;
+	color:#fff;
+	@include border-radius(4px);
+	@include transition(background 0.2s ease-out, border 0.2s ease-out, color 0.2s ease-out);
+	&.blue{
+		background:#3885d5;
+		color:#fff;
+		&:hover{
+			background:#2866a6;
+		}
+	}
+	&.gray{
+		background:transparent;
+		border:1px solid #edf0f1;
+		color:#bfbfbf;
+		&:hover{
+			color:$accent_color;
+			border-color:#c6c8c8;
+		}
+	}
+	&.tall{
+		padding:8px 20px;
+	}
+}
+
+.largesolid{
+	display:inline-block;
+	font:400 13px 'Montserrat', Arial, Sans-Serif;
+	padding:12px 32px; 
+	background:$accent_color;
+	color:#ffffff;
+	text-transform:uppercase;
+	@include border-radius(4px);
+	@include transition(background 0.2s ease-out);
+	i{
+		color:#fff;
+		margin:0 10px 0 0;
+	}
+	&.orange{
+		background:$accent_color;
+		color:#ffffff;
+		&:hover{
+			background:$accent_dark_color;
+		}
+	}
+	&.twitter{
+		background:$twitter_color;
+		color:#ffffff;
+		margin-right:10px;
+		padding:12px 22px;
+		&:hover{
+			background:darken($twitter_color, 10%);
+		}
+	}
+	&.facebook{
+		background:$facebook_color;
+		color:#ffffff;
+		margin-right:10px;
+		padding:12px 22px; 
+		&:hover{
+			background:darken($facebook_color, 10%);
+		}
+	}
+	&.google{
+		background:$google_color;
+		color:#ffffff;
+		margin-right:10px;
+		padding:12px 22px;
+		&:hover{
+			background:darken($google_color, 10%);
+		}
+	}
+}
+
+.largeoutline{
+	display:inline-block;
+	font:400 13px 'Montserrat', Arial, Sans-Serif;
+	padding:12px 20px; 
+	color:#c6c8c8;
+	border:1px solid #edf0f1;
+	text-transform:uppercase;
+	@include border-radius(4px);
+	@include transition(border 0.2s ease-out, color 0.2s ease-out,background 0.2s ease-out);
+	i{
+		color:#c6c8c8;
+		margin-right:10px;
+	}
+	&.wide{
+		padding:12px 26px;
+	}
+	&.thin{
+		padding:12px 16px;
+	}
+	&.dark{
+		color:#c6c8c8;
+		border-color:#c6c8c8;
+	}
+	&.active{
+		background:#ecedee;
+		border-color:#ecedee;
+		color:#3e4041;
+	}
+	&:hover{
+		border-color:#c6c8c8;
+		color:$accent_color;
+		i{
+			color:$accent_color;
+		}
+	}
+}
+
+.tags_list, .tags_list li{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+.tags_list li a{
+	display:inline-block;
+	padding:6px 14px;
+	float:left;
+	margin:0 6px 12px 0;
+	font:400 12px 'Montserrat', Arial, Sans-Serif;
+	background:#f7f6f6;
+	color:#808080;
+	@include border-radius(4px);
+	&:hover{
+		background:$accent_color;
+		color:#fff;
+	}
+}

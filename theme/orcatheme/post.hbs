@@ -1,0 +1,113 @@
+{{! USER CONFIGURATION OF THIS PAGE IS NOT REQUIRED }}
+{{!< default}}
+
+{{#post}}
+
+<div class="featureheader {{post_class}}">
+    <div class="background"></div>
+    <a href="{{@blog.url}}" class="logo"><img src="{{@blog.cover}}" alt="{{@blog.title}}"></a>
+    <div class="wrapper">
+        <div class="title">
+            <h1><a href="#">{{{title}}}</a></h1>
+            <div class="info">
+                <div class="left">
+                    <a href="{{author.website}}" class="author"><img src="{{author.image}}" alt="author" class="minigravatar">{{author.name}}</a>
+                </div>
+                <div class="right">
+                    <a href="#" class="date"><i class="fa fa-clock-o"></i>{{date format="MMMM Do, YYYY"}}</a>
+                   <span class="tags"><i class="fa fa-tags"></i>
+                        {{#foreach tags}}
+                            <a href="{{url}}" class="{{name}}">{{name}}</a>
+                        {{/foreach}}
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container {{post_class}}">
+
+    {{> sidebar_post}}
+
+    <div class="content">
+        <div class="widget postinfo_widget inline {{post_class}}">
+            {{#if @blog.logo}}
+            <a href="{{@blog.url}}" class="logo"><img src="{{@blog.logo}}" alt="{{@blog.title}}"></a>
+            {{/if}}
+        </div>
+        <div class="postlist">
+            <article class="post standard single">
+                <div class="header {{post_class}}">
+                    {{#has tag="featured"}}
+                        <a href="{{url}}" class="largeimage postfeature">
+                            <div class="shadow"></div>
+                            <h1>{{{title}}}</h1>
+                        </a>
+                    {{/has}}
+                    {{^has tag="featured"}}
+                        <a class="basicfeature postfeature" href="{{url}}"></a>
+                        <a href="{{url}}"><h1>{{{title}}}</h1></a>
+                    {{/has}}
+                    <div class="info">
+                        <div class="left">
+                            <a href="{{url}}" class="author"><img src="{{author.image}}" alt="author" class="minigravatar">{{author.name}}</a>
+                        </div>
+                        <div class="right">
+                            <a href="{{url}}" class="date"><i class="fa fa-clock-o"></i>{{date format="MMMM Do, YYYY"}}</a>
+                            <span class="tags"><i class="fa fa-tags"></i>
+                                {{#foreach tags}}
+                                    <a href="{{url}}" class="{{name}}">{{name}}</a>
+                                {{/foreach}}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="postcontents">
+                    {{content}}
+                </div> 
+                <div class="postfooter">
+                    <div class="social">
+                        <a href="http://twitter.com/share?text={{encode title}}&url={{url absolute="true"}}" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" class="largesolid twitter"><i class="fa fa-twitter"></i>Twitter</a>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" class="largesolid facebook"><i class="fa fa-facebook"></i>Facebook</a>
+                        <a href="https://plus.google.com/share?url={{url absolute="true"}}" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" class="largesolid google"><i class="fa fa-google-plus"></i>Google+</a>
+                    </div>
+                    <div class="tags">
+                        <ul class="tags_list">
+                            {{#foreach tags}}
+                            <li><a href="{{url}}" class="{{name}}">{{name}}</a></li>
+                            {{/foreach}}
+                        </ul>
+                    </div>
+                    <div class="permalink">
+                        Permalink: <a href="{{@blog.url}}{{url}}">{{@blog.url}}{{url}}</a>
+                    </div>
+                </div>
+            </article>
+            <div class="widget author_widget">
+                <a href="{{author.website}}"><img src="{{author.image}}" class="gravatar" alt="{{author.name}}"></a>
+                <h3><a href="{{author.website}}">{{author.name}}</a></h3>
+                <a href="{{author.website}}" class="author_url">{{author.website}}</a>
+                <p>{{author.bio}}</p>
+            </div>
+            <div class="comments">
+                <div class="graybar">
+                    <i class="fa fa-comments"></i>View Comments
+                </div>
+                <div id="disqus_thread"></div>
+                <div id="g-comments"></div>
+            </div>
+            <div class="inlinemenu">
+
+                <div class="graybar">
+                    <div class="left"><i class="fa fa-bars"></i>Navigation</div>
+                    <div class="right"><i class="fa fa-chevron-down"></i></div>
+                </div>
+                {{> navigation}}
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{{/post}}

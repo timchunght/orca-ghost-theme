@@ -1,0 +1,142 @@
+/*
+	COMMENTS STYLES
+*/
+
+.comments{
+	padding:70px 0 70px;
+	border-bottom: 1px solid #e5e5e5;
+	cursor:pointer;
+	.graybar{
+		display:none;
+		margin-bottom:50px;
+	}
+	.disqus_thread, #g-comments{
+		display:none;
+	}
+	#g-comments{
+		width:100% !important;
+		iframe{
+			width:100% !important;
+		}
+	}
+}
+
+.comment{
+	margin:50px 0;
+	.profile{
+		margin-right:30px;
+	}
+	.gravatar{
+		width:100%;
+		max-width:75px;
+		@include border-radius(90px);
+	}
+	h5{
+		margin:10px 0;
+	}
+	h5 a{
+		margin:0;
+		font:400 22px 'Montserrat', Arial, Sans-Serif;
+		color:#272828;
+		&:hover{
+			color:$accent_color;
+		}
+	}
+	.info{
+		overflow:hidden;
+		span{
+			font:400 14px 'Montserrat', Arial, Sans-Serif;
+			color:#dfdfdf;
+		}
+		.right{
+			text-transform: uppercase;
+		}
+	}
+	.buttons{
+		margin-top:15px;
+		.smallrounded{
+			margin-left:10px;
+		}
+	}
+	.body{
+		clear:both;
+	}
+	p{
+		font:400 16px 'Open Sans', Arial, Sans-Serif;
+		line-height:36px;
+		padding-left:105px;
+	}
+	&.inner{
+		margin-left:12.5%;
+	}
+	@media (max-width: 800px) {
+		.buttons{
+			display:none;
+		}
+	}
+}
+
+.comment-respond{
+	margin:50px 0;
+}
+
+#author, #email, #url{
+	width:31.5%;
+	margin-right:2.5%;
+	float:left;
+	@include border-radius(4px);
+	@media (max-width: 660px) {
+		width:100%;
+		margin-right:0;
+		float:none;
+		margin-bottom:20px;
+	}
+}
+
+#url{
+	margin-right:0;
+	@media (max-width: 660px) {
+		margin-bottom:0;
+	}
+}
+
+.leavereply{
+	margin-top:70px;
+}
+
+.commentbody{
+	width:100%;
+	margin:50px 0 0;
+	border:1px solid #ebebeb;
+	padding:20px;
+	font-size:16px;
+	outline:none;
+	@include box-sizing();
+	@include border-radius(4px);
+	@include transition(border 0.3s ease-out);
+	&:focus{
+		border: 1px solid $accent_color;
+		box-shadow: inset 0 0 0 1px $accent_color;
+	}
+}
+
+.form-allowed-tags{
+	margin:30px 0;
+	font-size:14px;
+}
+
+#submit{
+	padding:12px 35px;
+	background:#3885d5;
+	color:#fff;
+	width:auto;
+	text-transform:uppercase;
+	border:0;
+	display:inline-block;
+	font:400 15px 'Montserrat', Arial, Sans-Serif;
+	@include border-radius(4px);
+	@include transition(background 0.2s ease-out);
+	&:hover{
+		background:#2866a6;
+	}
+}

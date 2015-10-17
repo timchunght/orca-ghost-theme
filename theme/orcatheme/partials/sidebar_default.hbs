@@ -1,0 +1,20 @@
+{{! USER CONFIGURATION OF THIS PAGE IS NOT REQUIRED }}
+<div class="alternate">
+	<aside>
+		<!-- Description Widget -->
+		<div class="widget info_widget">
+			{{#if @blog.logo}}
+			<a href="{{@blog.url}}" class="logo"><img src="{{@blog.logo}}" alt="{{@blog.title}}"></a>
+			{{/if}}
+			<p>{{@blog.description}}</p>
+		</div>
+		<!-- Social Widget -->
+		<div class="widget social_widget">
+			{{> social_sidebar}}
+		</div>
+		<!-- Tag Widget -->
+		<div class="widget tag_widget">
+			{{> tags}}
+		</div>
+	</aside>
+</div>

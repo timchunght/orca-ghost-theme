@@ -1,0 +1,336 @@
+/*
+	SIDEBAR STYLES
+*/
+
+aside{
+
+}
+
+.widget{
+	padding:43px 0;
+	border-bottom: 1px solid #e5e5e5;
+	&:first-child{
+		padding-top:0;
+	}
+	h4{
+		font:400 16px 'Montserrat', Arial, Sans-Serif;
+		text-transform: uppercase;
+		color:#c6c8c8;
+		margin:0 0 30px;
+		i{
+			color:#c6c8c8;
+			margin-right:15px;
+		}
+	}
+}
+
+/* INFO WIDGET */
+.info_widget{
+	a.logo{
+		display:block;
+		margin-bottom:35px;
+		img{
+			max-width:100%;
+			max-height:100%;
+			display:inline-block;
+		}
+		&:hover{
+			opacity:0.6;
+		}
+	}
+	p{
+		font:400 16px 'Open Sans', Arial, Sans-Serif;
+		color:#2b2626;
+		line-height: 36px;
+		margin:0;
+	}
+}
+
+/* POST INFO WIDGET */
+.postinfo_widget{
+	a.logo{
+		display:block;
+		img{
+			max-width:100%;
+			max-height:100%;
+			display:inline-block;
+		}
+		&:hover{
+			opacity:0.6;
+		}
+	}
+	&.featured{
+		display:none;
+	}
+	&.inline{
+		margin:0 0 50px;
+		display:none;
+		@media (max-width: 1040px) {
+			display:block;
+			&.featured{
+				display:none;
+			}
+		}
+	}
+}
+
+/* SEARCH WIDGET */
+.search_widget{
+	position:relative;
+	input{
+		@include border-radius(4px);
+	}
+	i{
+		position:absolute;
+		padding:15px;
+		top: 46px;
+		right:8px;
+		cursor:pointer;
+		&:hover{
+			opacity:0.8;
+		}
+	}
+}
+
+/* POPULAR POSTS WIDGET */
+.popular_widget{
+	position:relative;
+	h5 a{
+		font-size:15px;
+	}
+}
+
+/* TWITTER WIDGET */
+.twitter_widget{
+	position:relative;
+	.tweet{
+		clear:both;
+		overflow:hidden;
+		margin-bottom:30px;
+		p{
+			margin:0 0 15px;
+			font:400 15px 'Open Sans', Arial, Sans-Serif;
+			line-height:36px;
+			color:#5e6163;
+		}
+		.user{
+			display:inline-block;
+			float:left;
+			font:400 15px 'Montserrat', Arial, Sans-Serif;
+			color:$accent_color;
+			&:hover{
+				color:$accent_dark_color;
+			}
+		}
+		.date{
+			display:inline-block;
+			float:right;
+			font:400 13px 'Open Sans', Arial, Sans-Serif;
+			color:#dfe1e1;
+			&:hover{
+				color:#c2c4c4;
+			}
+		}
+		&:last-child{
+			margin-bottom:0;
+		}
+	}
+	.follow{
+		position:absolute;
+		top:35px;
+		right:0;
+		text-transform:uppercase;
+	}
+}
+
+/* SOCIAL LINKS WIDGET */
+.social_widget{
+	text-align:justify;
+	padding-bottom:5px;
+	a{
+		margin-bottom:15px;
+		margin-right:5px;
+	}
+	&:before{
+		content:'';
+		display:block;
+		width: 100%;
+	}
+	&:after{
+		content: '';
+		display:inline-block;
+		width: 100%;
+	}
+}
+
+/* CALENDAR WIDGET */
+.calendar_widget{
+	@media (max-width: 1357px) {
+		display:none;
+	}
+}
+
+#wp-calendar{ 
+	width: 100%; border-collapse: separate;border-spacing: 10px; margin-left:-5px;
+}
+
+#wp-calendar caption{ 
+	display:none; 
+}
+
+#wp-calendar thead{ 
+	font-size: 10px; 
+	font:400 13px 'Montserrat', Arial, Sans-Serif; 
+	color:#c2c2c2; 
+}
+
+#wp-calendar thead th{ 
+	padding-bottom: 20px; 
+}
+
+#wp-calendar tbody{ 
+	color: #aaa; 
+}
+
+#wp-calendar tbody tr{ 
+	margin-bottom:10px; 
+}
+
+#wp-calendar tbody td{ 
+	font:400 13px 'Montserrat', Arial, Sans-Serif; 
+	margin-bottom:10px;color:#939393; 
+	background: #f7f6f6; 
+	text-align: center; 
+	padding:8px;
+	@include border-radius(90px); 
+}
+
+#wp-calendar tbody td#today{
+	background:#00aeef;
+	color:#fff;
+}
+
+#wp-calendar tbody td:hover{
+	background: #f8f7f7;
+}
+
+#wp-calendar tbody .pad{
+	background: none;
+}
+
+#wp-calendar tbody td a{
+	font:700 13px 'Montserrat', Arial, Sans-Serif;
+	@include border-radius(90px);
+	color:$accent_color;
+}  
+
+#wp-calendar tfoot a{
+	font:400 13px 'Montserrat', Arial, Sans-Serif; 
+	color:$accent_color;  
+}
+
+#wp-calendar a:hover{
+	color:$accent_dark_color;
+}
+
+#wp-calendar tfoot #next{
+	text-transform: uppercase;
+	text-align: right;
+}
+
+#wp-calendar tfoot #prev{
+	text-transform: uppercase;
+	padding-top: 10px;
+}
+
+/* TAG WIDGET */
+.tag_widget{
+	overflow:hidden;
+}
+
+/* AUTHOR WIDGET */
+.author_widget{
+	.gravatar{
+		width:50%;
+		max-width:90px;
+		@include border-radius(90px);
+	}
+	h3, h3 a{
+		font:700 24px 'Montserrat', Arial, Sans-Serif;
+		color:#2b2626;
+		&:hover{
+			color:$accent_color;
+		}
+	}
+	.author_url{
+		font:600 16px 'Open Sans', Arial, Sans-Serif;
+		color:#a8acb3;
+		&:hover{
+			color:#676a6f;
+		}
+	}
+	p{
+		font:400 16px 'Open Sans', Arial, Sans-Serif;
+		color:#2b2626;
+		line-height: 36px;
+	}
+	&.featured{
+		margin-top:0;
+		padding-top:0;
+	}
+}
+
+
+/* Sidebar Post List */
+
+aside .postlist{
+	list-style:none;
+	padding:0;
+	margin:40px 0 0;
+	li{
+		overflow:hidden;
+		margin-bottom:25px;
+		&:last-child{
+			margin-bottom:0;
+		}
+	}
+	.thumbnail{
+		width:15.6%;
+		height:45px;
+		max-width:45px;
+		float:left;
+		img{
+			max-width:100%;
+			height:100%;
+			@include border-radius(4px);
+		}
+		@media (max-width: 1357px) {
+			display:none;
+		}
+	}
+	.info{
+		float:left;
+		width:77.8%;
+		margin-left:6.6%;
+		@media (max-width: 1357px) {
+			width:100%;
+			margin-left:0;
+		}
+	}
+	h5, h5 a{
+		display:block;
+		margin:-5px 0 0;
+		padding:0;
+		color:#2b2626;
+		line-height:24px;
+		&:hover{
+			color:$accent_color;
+		}
+	}
+	small{
+		display:block;
+		margin-top:10px;
+		font:400 14px 'Open Sans', Arial, Sans-Serif;
+		color:#d3d3d3;
+	}
+}

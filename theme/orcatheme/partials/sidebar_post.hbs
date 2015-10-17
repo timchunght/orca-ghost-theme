@@ -1,0 +1,26 @@
+{{! USER CONFIGURATION OF THIS PAGE IS NOT REQUIRED }}
+<div class="alternate">
+    <aside>
+        <!-- Description Widget -->
+        <div class="widget postinfo_widget {{post_class}}">
+            {{#if @blog.logo}}
+            <a href="{{@blog.url}}" class="logo"><img src="{{@blog.logo}}" alt="{{@blog.title}}"></a>
+            {{/if}}
+        </div>
+        <!-- Author Widget -->
+        <div class="widget author_widget {{post_class}}">
+            <a href="{{author.website}}"><img src="{{author.image}}" class="gravatar" alt="Harvey Specter"></a>
+            <h3><a href="{{author.website}}">{{author.name}}</a></h3>
+            <a href="{{author.website}}" class="author_url">{{author.website}}</a>
+            <p>{{author.bio}}</p>
+        </div>
+        <!-- Social Widget -->
+        <div class="widget social_widget">
+            {{> social_sidebar}}
+        </div>
+        <!-- Tag Widget -->
+        <div class="widget tag_widget">
+            {{> tags}}
+        </div>
+    </aside>
+</div>

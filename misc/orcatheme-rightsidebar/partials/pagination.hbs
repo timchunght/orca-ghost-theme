@@ -1,0 +1,15 @@
+{{! USER CONFIGURATION OF THIS PAGE IS NOT REQUIRED }}
+<nav class="pagination">
+	{{#if next}}
+	<a href="{{page_url next}}" class="largeoutline dark wide left">
+		<span class="main">Older Posts</span>
+		<span class="sub"><i class="fa fa-chevron-left"></i></span>
+	</a>
+	{{/if}}
+	{{#if prev}}
+	<a href="{{page_url prev}}" class="largeoutline dark wide right">
+		<span class="main">Newer Posts</span>
+		<span class="sub"><i class="fa fa-chevron-right"></i></span>
+	</a>
+	{{/if}}
+</nav>

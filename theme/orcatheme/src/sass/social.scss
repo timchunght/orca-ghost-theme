@@ -1,0 +1,134 @@
+/*
+	SOCIAL BUTTON STYLES
+*/
+
+.social_outline{
+	display:inline-block;
+	position:relative;
+	width:36px;
+	height:36px;
+	border:1px solid #000;
+	text-align:center;
+	@include border-radius(60px);
+	@include transition(border-color 0.2s ease-in, color 0.1s ease-in, background 0.2s ease-in);
+	i{
+		vertical-align:-5px;
+	}
+	&.twitter{
+		border-color:$twitter_color;
+		i{ color:$twitter_color; }
+		&:hover{ background:$twitter_color; }
+	}
+	&.facebook{
+		border-color:$facebook_color;
+		i{ color:$facebook_color; }
+		&:hover{ background:$facebook_color; }
+	}
+	&.google{
+		border-color:$google_color;
+		i{ color:$google_color; }
+		&:hover{ background:$google_color; }
+	}
+	&.dribbble{
+		border-color:$dribbble_color;
+		i{ color:$dribbble_color; }
+		&:hover{ background:$dribbble_color; }
+	}
+	&.instagram{
+		border-color:$instagram_color;
+		i{ color:$instagram_color; }
+		&:hover{ background:$instagram_color; }
+	}
+	&.github{
+		border-color:$github_color;
+		i{ color:$github_color; }
+		&:hover{ background:$github_color; }
+	}
+	&.rss{
+		border-color:$rss_color;
+		i{ color:$rss_color; }
+		&:hover{ background:$rss_color; }
+	}
+	&.youtube{
+		border-color:$youtube_color;
+		i{ color:$youtube_color; }
+		&:hover{ background:$youtube_color; }
+	}
+	&.pinterest{
+		border-color:$pinterest_color;
+		i{ color:$pinterest_color; }
+		&:hover{ background:$pinterest_color; }
+	}
+	&.linkedin{
+		border-color:$linkedin_color;
+		i{ color:$linkedin_color; }
+		&:hover{ background:$linkedin_color; }
+	}
+	&.skype{
+		border-color:$skype_color;
+		i{ color:$skype_color; }
+		&:hover{ background:$skype_color; }
+	}
+	&.tumblr{
+		border-color:$tumblr_color;
+		i{ color:$tumblr_color; }
+		&:hover{ background:$tumblr_color; }
+	}
+	&:hover i{
+		color:#fff;
+	}
+}
+
+.social_solid{
+	display:inline-block;
+	position:relative;
+	width:36px;
+	height:36px;
+	text-align:center;
+	@include border-radius(60px);
+	@include transition(border-color 0.2s ease-in, color 0.1s ease-in, background 0.2s ease-in);
+	i{
+		vertical-align:-5px;
+	}
+	&.twitter{
+		background:$twitter_color;
+		i{ color:#fff; }
+		&:hover i{ color:$twitter_color; }
+	}
+	&.facebook{
+		background:$facebook_color;
+		i{ color:#fff; }
+		&:hover i{ color:$facebook_color; }
+	}
+	&.google{
+		background:$google_color;
+		i{ color:#fff; }
+		&:hover i{ color:$google_color; }
+	}
+	&.dribbble{
+		background:$dribbble_color;
+		i{ color:#fff; }
+		&:hover i{ color:$dribbble_color; }
+	}
+	&.instagram{
+		background:$instagram_color;
+		i{ color:#fff; }
+		&:hover i{ color:$instagram_color; }
+	}
+	&.github{
+		background:$github_color;
+		i{ color:#fff; }
+		&:hover i{ color:$github_color; }
+	}
+	&.rss{
+		background:$rss_color;
+		i{ color:#fff; }
+		&:hover i{ color:$rss_color; }
+	}
+	&:hover i{
+		color:#fff;
+	}
+	&:hover{
+		background:#fff;
+	}
+}

@@ -1,0 +1,16 @@
+{
+  "name": "EckoOrcaTheme",
+  "version": "1.0.0",
+  "private": true,
+  "author": "Ecko <support@ecko.me>",
+  "description": "Orca Blog Theme by EckoThemes",
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-connect": "~0.6.0",
+    "grunt-contrib-cssmin": "~0.7.0",
+    "grunt-contrib-compass": "~0.7.0",
+    "grunt-contrib-uglify": "~0.2.7",
+    "grunt-contrib-concat": "~0.4.0"
+  }
+}
